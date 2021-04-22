@@ -1,0 +1,51 @@
+
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+
+        <link href="{% static 'home.css' %}" rel="stylesheet">
+
+    </head>
+
+
+    <div class="container">
+        <div class="widget">
+            <div class="details">
+                <!-- <div class="temperature">20°</div> -->
+                <div class="summary">
+                    <p class="summaryText">Enter Cordinates</p>
+                </div>
+                <!-- <div class="precipitation">Precipitation: 20%</div>
+                <div class="wind">Wind: 3 mph</div> -->
+            </div>
+            <div class="pictoBackdrop"></div>
+            <div class="pictoFrame"></div>
+            <div class="pictoCloudBig"></div>
+            <div class="pictoCloudFill"></div>
+            <div class="pictoCloudSmall"></div>
+            <div class="iconCloudBig"></div>
+            <div class="iconCloudFill"></div>
+            <div class="iconCloudSmall"></div>
+        </div>
+
+        <div class= "widget">
+            <form action="" method="POST"> 
+                {% csrf_token %}
+                {{form}}
+                
+                
+                <!-- <label for="lat">Latitude:</label>
+                <input type="text" id="lat" name="lat" value=""><br><br>
+                <label for="lon">Longitude:</label>
+                <input type="text" id="lon" name="lon" value=""><br><br> -->
+                <input type="submit" value="Search"> 
+            </form>
+        </div>
+
+
+    </div>
+</html>
